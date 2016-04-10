@@ -16,68 +16,63 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     var selectedItem: Meme? = nil
     
-    var memes : [Meme] = []
+    var memes : [Meme] =  GlobalVariables.memeList
     
     var selectedMeme: Meme? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "reuseIdentifier")
         self.tableView.dataSource = self
         self.tableView.delegate = self
         
         //        makeSampleProduct()
-        
-        
-    }
-    
-    override func viewWillAppear(animated: Bool) {
-        let context = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
-        let request = NSFetchRequest(entityName: "Meme")
-        
-        var results: [AnyObject]?
-        
-        do {
-            results = try context.executeFetchRequest(request)
-        } catch {
-            results = nil
-        }
-        
-//        if results != nil {
-//            self.memes = results! as! [Meme]
-//        }
-        
         self.tableView.reloadData()
         
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        for x : Meme in GlobalVariables.memeList {
+            print("\(GlobalVariables.memeList.count) items")
+            print("New List")
+            print(x)
+        }
         
+        self.tableView.reloadData()
     }
     
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.memes.count
+    override func viewWillAppear(animated: Bool) {
+        self.tableView.reloadData()
         
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return GlobalVariables.memeList.count
+//                return 10
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-        //        cell.textLabel!.text = product.title
-        //        cell.textLabel!.text = "Nike kicks"
+        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
         
-        let meme = self.memes[indexPath.row]
-        //
-        //        cell.imageView!.image = UIImage(named: "darthvader@2x-iphone.png")
-//        cell.imageView!.image = UIImage(data: meme.image!)
+        let meme = GlobalVariables.memeList[indexPath.row]
+        
+        cell.textLabel!.text = meme.topText + " " + meme.bottomText
+ 
+        cell.imageView!.image = meme.memedImage
+//                cell.imageView!.image = UIImage(named: "darthvader@2x-iphone.png")
+//               cell.textLabel!.text = "Nike kicks"
+        
         
         return cell
     }
     
     
-    
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        self.selectedItem = self.memes[indexPath.row]
-        
-        self.performSegueWithIdentifier("showMemeSegue", sender: self)
-    }
+    //    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    //        self.selectedItem = GlobalVariables.memeList[indexPath.row]
+    //
+    //        self.performSegueWithIdentifier("showMemeSegue", sender: self)
+    //    }
     
     
     
@@ -92,7 +87,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         }
     }
     
-
+    
     
     
 }

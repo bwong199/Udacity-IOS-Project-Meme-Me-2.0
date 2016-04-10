@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MemeMe/addMemeController.swift"
-            timestampString = "481822497.508707"
+            timestampString = "481953579.338865"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "122"
@@ -26,7 +26,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MemeMe/addMemeController.swift"
-            timestampString = "481821208.56982"
+            timestampString = "481953579.338865"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "41"
@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MemeMe/ViewController.swift"
-            timestampString = "480716096.793083"
+            timestampString = "482024699.069692"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "73"
-            endingLineNumber = "73"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
             landmarkName = "ViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -73,13 +73,13 @@
                   symbolName = "MemeMe.MemesCollectionView.__deallocating_deinit"
                   moduleName = "MemeMe"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/benwong/Desktop/IOS/MemeMe/MemeMe/MemesCollectionView.swift"
-                  timestampString = "481843611.990861"
+                  urlString = "file:///Users/benwong/Desktop/IOS/MemeMe2/MemeMe/MemesCollectionView.swift"
+                  timestampString = "482023906.561183"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
                   endingLineNumber = "0"
-                  offsetFromSymbolStart = "12">
+                  offsetFromSymbolStart = "4">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -88,13 +88,13 @@
                   symbolName = "MemeMe.MemesCollectionView.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.NSBundle&gt;) -&gt; MemeMe.MemesCollectionView"
                   moduleName = "MemeMe"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/benwong/Desktop/IOS/MemeMe/MemeMe/MemesCollectionView.swift"
-                  timestampString = "481843611.991062"
+                  urlString = "file:///Users/benwong/Desktop/IOS/MemeMe2/MemeMe/MemesCollectionView.swift"
+                  timestampString = "482023906.561336"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "16"
                   endingLineNumber = "16"
-                  offsetFromSymbolStart = "84">
+                  offsetFromSymbolStart = "97">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -103,13 +103,13 @@
                   symbolName = "MemeMe.MemesCollectionView.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;MemeMe.MemesCollectionView&gt;"
                   moduleName = "MemeMe"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/benwong/Desktop/IOS/MemeMe/MemeMe/MemesCollectionView.swift"
-                  timestampString = "481843611.991212"
+                  urlString = "file:///Users/benwong/Desktop/IOS/MemeMe2/MemeMe/MemesCollectionView.swift"
+                  timestampString = "482023906.561457"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "16"
                   endingLineNumber = "16"
-                  offsetFromSymbolStart = "48">
+                  offsetFromSymbolStart = "57">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -135,11 +135,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MemeMe/MemesCollectionView.swift"
-            timestampString = "480715921.315931"
+            timestampString = "482024699.069692"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "79"
-            endingLineNumber = "79"
+            startingLineNumber = "75"
+            endingLineNumber = "75"
             landmarkName = "prepareForSegue(_:sender:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -151,11 +151,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MemeMe/MemesCollectionView.swift"
-            timestampString = "480715921.315931"
+            timestampString = "482024699.069692"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "79"
-            endingLineNumber = "79"
+            startingLineNumber = "75"
+            endingLineNumber = "75"
             landmarkName = "prepareForSegue(_:sender:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -167,7 +167,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MemeMe/AddMemeController.swift"
-            timestampString = "481822060.333391"
+            timestampString = "481953579.338865"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "77"
@@ -183,7 +183,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MemeMe/AddMemeController.swift"
-            timestampString = "481822497.508707"
+            timestampString = "481953579.338865"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "147"
@@ -214,13 +214,13 @@
                   symbolName = "MemeMe.Meme.topText.getter : Swift.String"
                   moduleName = "MemeMe"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/benwong/Desktop/IOS/MemeMe/MemeMe/Meme.swift"
-                  timestampString = "481843611.994139"
+                  urlString = "file:///Users/benwong/Desktop/IOS/MemeMe2/MemeMe/Meme.swift"
+                  timestampString = "482023906.565032"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "12"
                   endingLineNumber = "12"
-                  offsetFromSymbolStart = "96">
+                  offsetFromSymbolStart = "91">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -229,15 +229,31 @@
                   symbolName = "MemeMe.Meme.topText.setter : Swift.String"
                   moduleName = "MemeMe"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/benwong/Desktop/IOS/MemeMe/MemeMe/Meme.swift"
-                  timestampString = "481843611.994266"
+                  urlString = "file:///Users/benwong/Desktop/IOS/MemeMe2/MemeMe/Meme.swift"
+                  timestampString = "482023906.565161"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "12"
                   endingLineNumber = "12"
-                  offsetFromSymbolStart = "92">
+                  offsetFromSymbolStart = "84">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MemeMe/MemesCollectionView.swift"
+            timestampString = "482024992.964515"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "collectionView(_:cellForItemAtIndexPath:)"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

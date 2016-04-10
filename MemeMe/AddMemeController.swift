@@ -10,7 +10,7 @@ import UIKit
 
 class AddMemeController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
     
-
+    
     @IBOutlet var topTextField: UITextField!
     
     @IBOutlet var bottomTextField: UITextField!
@@ -25,7 +25,7 @@ class AddMemeController: UIViewController, UIImagePickerControllerDelegate, UINa
     
     
     @IBAction func cancelButton(sender: AnyObject) {
-        dismissViewControllerAnimated(true, completion: nil)
+        self.dismissViewControllerAnimated(true, completion: {});
     }
     
     
@@ -50,7 +50,7 @@ class AddMemeController: UIViewController, UIImagePickerControllerDelegate, UINa
         topTextField.text = "TOP"
         topTextField.sizeToFit()
         topTextField.defaultTextAttributes = memeTextAttributes
-  
+        
         bottomTextField.text = "BOTTOM"
         bottomTextField.sizeToFit()
         bottomTextField.defaultTextAttributes = memeTextAttributes
@@ -93,8 +93,8 @@ class AddMemeController: UIViewController, UIImagePickerControllerDelegate, UINa
     }
     
     func keyboardWillHide(notification: NSNotification) {
-//        view.frame.origin.y += getKeyboardHeight(notification)
-            view.frame.origin.y = 0
+        //        view.frame.origin.y += getKeyboardHeight(notification)
+        view.frame.origin.y = 0
     }
     
     func getKeyboardHeight(notification: NSNotification) -> CGFloat {
@@ -108,7 +108,7 @@ class AddMemeController: UIViewController, UIImagePickerControllerDelegate, UINa
         
     }
     
-   
+    
     @IBAction func cameraBtnTapped(sender: AnyObject) {
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera){
             presentImagePicker(UIImagePickerControllerSourceType.Camera)
@@ -121,7 +121,7 @@ class AddMemeController: UIViewController, UIImagePickerControllerDelegate, UINa
     
     @IBAction func albumButtonTapped(sender: AnyObject) {
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.PhotoLibrary){
-
+            
             presentImagePicker(UIImagePickerControllerSourceType.PhotoLibrary)
         } else {
             
@@ -159,10 +159,12 @@ class AddMemeController: UIViewController, UIImagePickerControllerDelegate, UINa
         picker.dismissViewControllerAnimated(true, completion: nil)
     }
     
-
+    
     func saveMemedImage() {
         //Create the meme
-        _ = Meme( topText: topTextField.text!, bottomText: bottomTextField.text!, originalImage: imageView.image!, memedImage: takeScreenshot(imageView))
+        let newMeme = Meme( topText: topTextField.text!, bottomText: bottomTextField.text!, originalImage: imageView.image!, memedImage: takeScreenshot(imageView))
+        
+        GlobalVariables.memeList.append(newMeme)
         
         //TODO: Add to memes array in AppDelegate
         
@@ -171,7 +173,7 @@ class AddMemeController: UIViewController, UIImagePickerControllerDelegate, UINa
     
     func takeScreenshot(theView: UIView) -> UIImage {
         
-       
+        
         imageView.addSubview(topTextField)
         imageView.addSubview(bottomTextField)
         

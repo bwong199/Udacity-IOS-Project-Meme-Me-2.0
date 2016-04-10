@@ -17,44 +17,39 @@ class MemesCollectionView: UIViewController,  UICollectionViewDataSource, UIColl
     
     let reuseIdentifier = "cell"
     
-    var memes : [Meme] = []
+    var memes : [Meme] = GlobalVariables.memeList
     
     var selectedItem: Meme? = nil
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let context = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
-        let request = NSFetchRequest(entityName: "Meme")
-        
-        var results: [AnyObject]?
-        
-        do {
-            results = try context.executeFetchRequest(request)
-        } catch {
-            results = nil
+        for x : Meme in GlobalVariables.memeList {
+            print(x)
         }
         
-//        if results != nil {
-//            self.memes = results! as! [Meme]
-//        }
-        
+        //        self.collectionView.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: "cell")
         self.collectionView.reloadData()
         
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        self.collectionView.reloadData()
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        self.collectionView.reloadData()
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
         // get a reference to our storyboard cell
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! MyCollectionViewCell
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as! MyCollectionViewCell
         
+        let meme = GlobalVariables.memeList[indexPath.row]
         
-        let meme = self.memes[indexPath.row]
-        //
-        //        cell.imageView!.image = UIImage(named: "darthvader@2x-iphone.png")
-//        cell.myImage!.image = UIImage(data: meme.image!)
-        
-        
+        cell.myImage!.image = meme.memedImage
         
         return cell
     }
@@ -62,16 +57,17 @@ class MemesCollectionView: UIViewController,  UICollectionViewDataSource, UIColl
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.memes.count
+        //        return 10
     }
     
-    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        // handle tap events
-        print("You selected cell #\(indexPath.item)!")
-        
-        self.selectedItem = self.memes[indexPath.row]
-        
-        self.performSegueWithIdentifier("showMemeSegue", sender: self)
-    }
+    //    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+    //        // handle tap events
+    //        print("You selected cell #\(indexPath.item)!")
+    //
+    //        self.selectedItem =  GlobalVariables.memeList[indexPath.row]
+    //
+    //        self.performSegueWithIdentifier("showMemeSegue", sender: self)
+    //    }
     
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
