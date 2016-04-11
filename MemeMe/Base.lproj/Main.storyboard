@@ -26,7 +26,7 @@
                                         <rect key="frame" x="0.0" y="28" width="600" height="63"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mUC-J5-9B9" id="Xag-6D-uiJ">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="62.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="63"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -80,6 +80,9 @@
                         <subviews>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FCw-mv-VCN">
                                 <rect key="frame" x="0.0" y="512" width="600" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="hQY-kp-GIg"/>
+                                </constraints>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="bva-Lb-v7N"/>
                                     <barButtonItem systemItem="camera" id="rhL-HH-Loe">
@@ -97,7 +100,7 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="xOc-0g-0c7"/>
                                 </items>
                             </toolbar>
-                            <navigationBar contentMode="scaleAspectFit" horizontalCompressionResistancePriority="743" verticalCompressionResistancePriority="749" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DhL-KW-Z9T">
+                            <navigationBar contentMode="scaleAspectFit" horizontalCompressionResistancePriority="743" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="DhL-KW-Z9T">
                                 <rect key="frame" x="-1" y="20" width="601" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="601" id="bsz-Jn-nDZ"/>
@@ -119,7 +122,7 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kuZ-hp-V6P">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kuZ-hp-V6P">
                                 <rect key="frame" x="0.0" y="64" width="600" height="448"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </imageView>
@@ -134,7 +137,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="TOP" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t8d-H5-0tg">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="TOP" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t8d-H5-0tg">
                                 <rect key="frame" x="252" y="120" width="97" height="30"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -157,6 +160,7 @@
                             <constraint firstItem="kuZ-hp-V6P" firstAttribute="leading" secondItem="FCw-mv-VCN" secondAttribute="leading" id="eRT-9T-edx"/>
                             <constraint firstItem="FCw-mv-VCN" firstAttribute="top" secondItem="kuZ-hp-V6P" secondAttribute="bottom" id="eSA-op-f9o"/>
                             <constraint firstItem="FCw-mv-VCN" firstAttribute="bottom" secondItem="EXT-m5-PnJ" secondAttribute="top" id="h5s-kq-32h"/>
+                            <constraint firstItem="FCw-mv-VCN" firstAttribute="centerX" secondItem="Xmx-ks-XWD" secondAttribute="centerX" id="hiw-Ss-5eF"/>
                             <constraint firstItem="kuZ-hp-V6P" firstAttribute="trailing" secondItem="FCw-mv-VCN" secondAttribute="trailing" id="hpd-WR-osU"/>
                             <constraint firstItem="t8d-H5-0tg" firstAttribute="centerX" secondItem="FCw-mv-VCN" secondAttribute="centerX" id="nk8-KY-J2I"/>
                             <constraint firstItem="DhL-KW-Z9T" firstAttribute="top" secondItem="sxe-z5-Uiq" secondAttribute="bottom" id="pZz-qT-C25"/>
