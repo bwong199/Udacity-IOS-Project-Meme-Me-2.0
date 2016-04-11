@@ -34,8 +34,10 @@ class AddMemeController: UIViewController, UIImagePickerControllerDelegate, UINa
         
         topTextField.delegate = self
         bottomTextField.delegate = self
-        setUpTextfield()
-        
+        setUpTextfield(topTextField)
+        setUpTextfield(bottomTextField)
+        topTextField.text = "TOP"
+        bottomTextField.text = "BOTTOM"
     }
     
     let memeTextAttributes = [
@@ -45,15 +47,9 @@ class AddMemeController: UIViewController, UIImagePickerControllerDelegate, UINa
         NSStrokeWidthAttributeName : -3.0
     ]
     
-    func setUpTextfield(){
-        
-        topTextField.text = "TOP"
-        topTextField.sizeToFit()
-        topTextField.defaultTextAttributes = memeTextAttributes
-        
-        bottomTextField.text = "BOTTOM"
-        bottomTextField.sizeToFit()
-        bottomTextField.defaultTextAttributes = memeTextAttributes
+    func setUpTextfield(textField: UITextField){
+        textField.sizeToFit()
+        textField.defaultTextAttributes = memeTextAttributes
     }
     
     func textFieldDidBeginEditing(textField: UITextField) {
@@ -90,6 +86,8 @@ class AddMemeController: UIViewController, UIImagePickerControllerDelegate, UINa
     
     func keyboardWillShow(notification: NSNotification) {
         view.frame.origin.y -= getKeyboardHeight(notification)
+        
+        
     }
     
     func keyboardWillHide(notification: NSNotification) {
@@ -100,9 +98,19 @@ class AddMemeController: UIViewController, UIImagePickerControllerDelegate, UINa
     func getKeyboardHeight(notification: NSNotification) -> CGFloat {
         let userInfo = notification.userInfo
         let keyboardSize = userInfo![UIKeyboardFrameEndUserInfoKey] as! NSValue // of CGRect
+        
+        //        if UIDevice.currentDevice().orientation.isPortrait && topTextField.editing {
+        //            return keyboardSize.CGRectValue().height
+        //        } else {
+        //            return 0
+        //        }
+        
+        
         if bottomTextField.editing {
             return keyboardSize.CGRectValue().height
-        } else {
+        } else if topTextField.editing && UIDevice.currentDevice().orientation.isLandscape {
+            return keyboardSize.CGRectValue().height/2
+        }              else {
             return 0
         }
         

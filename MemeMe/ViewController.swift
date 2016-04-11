@@ -26,17 +26,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         self.tableView.dataSource = self
         self.tableView.delegate = self
         
-        //        makeSampleProduct()
         self.tableView.reloadData()
         
     }
     
     override func viewDidAppear(animated: Bool) {
-        for x : Meme in GlobalVariables.memeList {
-            print("\(GlobalVariables.memeList.count) items")
-            print("New List")
-            print(x)
-        }
         
         self.tableView.reloadData()
     }

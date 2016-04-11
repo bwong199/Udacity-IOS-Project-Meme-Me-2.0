@@ -25,11 +25,6 @@ class MemesCollectionView: UIViewController,  UICollectionViewDataSource, UIColl
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        for x : Meme in GlobalVariables.memeList {
-            print(x)
-        }
-        
-        //        self.collectionView.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: "cell")
         self.collectionView.reloadData()
         
     }

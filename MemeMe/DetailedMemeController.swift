@@ -30,8 +30,4 @@ class DetailedMemeController: UIViewController{
         self.dismissViewControllerAnimated(false, completion: nil)
     }
 
-    override func viewWillDisappear(animated: Bool) {
-        super.viewWillDisappear(animated)
-        self.tabBarController?.tabBar.hidden = false
-    }
 }
