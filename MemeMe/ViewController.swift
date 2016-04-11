@@ -68,11 +68,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     
-    //    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-    //        self.selectedItem = GlobalVariables.memeList[indexPath.row]
-    //
-    //        self.performSegueWithIdentifier("showMemeSegue", sender: self)
-    //    }
+        func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+            self.selectedItem = GlobalVariables.memeList[indexPath.row]
+    
+            self.performSegueWithIdentifier("showMemeSegue", sender: self)
+        }
     
     
     

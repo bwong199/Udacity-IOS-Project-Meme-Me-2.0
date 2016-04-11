@@ -47,8 +47,9 @@ class MemesCollectionView: UIViewController,  UICollectionViewDataSource, UIColl
         // get a reference to our storyboard cell
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as! MyCollectionViewCell
         
+
+//        cell.myImage!.image = UIImage(named: "darthvader@2x-iphone.png")
         let meme = GlobalVariables.memeList[indexPath.row]
-        
         cell.myImage!.image = meme.memedImage
         
         return cell
@@ -56,18 +57,18 @@ class MemesCollectionView: UIViewController,  UICollectionViewDataSource, UIColl
     
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.memes.count
-        //        return 10
+        return GlobalVariables.memeList.count
+//                return 10
     }
     
-    //    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-    //        // handle tap events
-    //        print("You selected cell #\(indexPath.item)!")
-    //
-    //        self.selectedItem =  GlobalVariables.memeList[indexPath.row]
-    //
-    //        self.performSegueWithIdentifier("showMemeSegue", sender: self)
-    //    }
+        func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+            // handle tap events
+            print("You selected cell #\(indexPath.item)!")
+    
+            self.selectedItem =  GlobalVariables.memeList[indexPath.row]
+    
+            self.performSegueWithIdentifier("showMemeSegue", sender: self)
+        }
     
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
