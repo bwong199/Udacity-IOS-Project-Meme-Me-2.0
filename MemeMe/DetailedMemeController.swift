@@ -15,19 +15,25 @@ class DetailedMemeController: UIViewController{
     
     var meme : Meme? = nil
     
-
+    override func viewDidLoad() {
+        self.navigationController?.navigationBarHidden = true
+        self.imageView.image = meme!.memedImage
+        self.imageView.contentMode = UIViewContentMode.ScaleAspectFill
+    }
+    
+    
     
     override func viewWillAppear(animated: Bool) {
         
         super.viewWillAppear(animated)
         
-        self.tabBarController?.tabBar.hidden = true
         
-        self.imageView.image = meme!.memedImage
+        
     }
-
-    @IBAction func CancelButton(sender: AnyObject) {
-        self.dismissViewControllerAnimated(false, completion: nil)
+    
+    @IBAction func BackButton(sender: AnyObject) {
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
-
+    
+    
 }
