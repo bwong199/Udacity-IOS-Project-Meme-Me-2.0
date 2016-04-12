@@ -53,7 +53,6 @@ class MemesCollectionView: UIViewController,  UICollectionViewDataSource, UIColl
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return GlobalVariables.memeList.count
-//                return 10
     }
     
         func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {

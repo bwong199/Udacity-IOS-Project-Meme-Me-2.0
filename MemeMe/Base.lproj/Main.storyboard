@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="63" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8ZN-TB-2Yz">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="63" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8ZN-TB-2Yz">
                                 <rect key="frame" x="0.0" y="108" width="600" height="443"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -32,7 +32,7 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XiH-9m-39f">
+                            <navigationBar contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XiH-9m-39f">
                                 <rect key="frame" x="0.0" y="64" width="600" height="44"/>
                                 <items>
                                     <navigationItem title="Sent Memes" id="tz3-TV-aHs">
@@ -59,7 +59,7 @@
                     <tabBarItem key="tabBarItem" title="List View" image="table_30x30.png" id="w3W-hq-liQ"/>
                     <connections>
                         <outlet property="tableView" destination="8ZN-TB-2Yz" id="0oW-yN-Pft"/>
-                        <segue destination="lPR-gk-hJM" kind="modal" identifier="showMemeSegue" modalTransitionStyle="flipHorizontal" id="qf8-O4-cQG"/>
+                        <segue destination="lPR-gk-hJM" kind="push" identifier="showMemeSegue" id="qf8-O4-cQG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -194,7 +194,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ZKQ-Qi-Tvj">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ZKQ-Qi-Tvj">
                                 <rect key="frame" x="20" y="108" width="560" height="435"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="2" minimumInteritemSpacing="2" id="s01-I4-xbK">
@@ -211,7 +211,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HtM-6j-UNv">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HtM-6j-UNv">
                                                     <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
                                                 </imageView>
                                             </subviews>
@@ -235,7 +235,7 @@
                                     <outlet property="delegate" destination="Pom-In-g7H" id="aCl-t9-Cet"/>
                                 </connections>
                             </collectionView>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VrE-Qy-4d5">
+                            <navigationBar contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VrE-Qy-4d5">
                                 <rect key="frame" x="0.0" y="64" width="600" height="44"/>
                                 <items>
                                     <navigationItem title="Sent Memes" id="WZ0-IM-Oci">
@@ -267,12 +267,12 @@ EENvbGxlY3Rpb24gVmlldw
                     </tabBarItem>
                     <connections>
                         <outlet property="collectionView" destination="ZKQ-Qi-Tvj" id="ppH-Hk-wja"/>
-                        <segue destination="lPR-gk-hJM" kind="presentation" identifier="showMemeSegue" modalTransitionStyle="flipHorizontal" id="wfv-pR-PNX"/>
+                        <segue destination="lPR-gk-hJM" kind="push" identifier="showMemeSegue" id="wfv-pR-PNX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ggZ-OR-AaR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2223" y="787"/>
+            <point key="canvasLocation" x="-1824" y="825"/>
         </scene>
         <!--Detailed Meme Controller-->
         <scene sceneID="If5-Ka-YDn">
@@ -286,13 +286,13 @@ EENvbGxlY3Rpb24gVmlldw
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zYd-sw-NOS">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zYd-sw-NOS">
                                 <rect key="frame" x="20" y="115" width="560" height="428"/>
                             </imageView>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Eoj-aZ-laL">
-                                <rect key="frame" x="0.0" y="64" width="600" height="44"/>
+                            <navigationBar contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Eoj-aZ-laL">
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                 <items>
-                                    <navigationItem title="Title" id="5oe-o9-5Cl">
+                                    <navigationItem id="5oe-o9-5Cl">
                                         <barButtonItem key="leftBarButtonItem" title="Back" id="Ry6-es-sUb">
                                             <connections>
                                                 <action selector="BackButton:" destination="lPR-gk-hJM" id="Pa1-Yd-a1S"/>
@@ -346,7 +346,7 @@ EENvbGxlY3Rpb24gVmlldw
         <!--Navigation Controller-->
         <scene sceneID="uGN-vl-ja1">
             <objects>
-                <navigationController id="DZM-e3-4wS" sceneMemberID="viewController">
+                <navigationController navigationBarHidden="YES" id="DZM-e3-4wS" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="X66-eq-RhC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -357,7 +357,7 @@ EENvbGxlY3Rpb24gVmlldw
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WD3-Jg-toG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3822" y="601"/>
+            <point key="canvasLocation" x="-3869" y="562"/>
         </scene>
     </scenes>
     <resources>
@@ -365,7 +365,7 @@ EENvbGxlY3Rpb24gVmlldw
         <image name="table_30x30.png" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="wfv-pR-PNX"/>
+        <segue reference="qf8-O4-cQG"/>
         <segue reference="v8m-uI-Rxk"/>
     </inferredMetricsTieBreakers>
 </document>

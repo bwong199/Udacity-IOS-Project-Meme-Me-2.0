@@ -18,7 +18,7 @@ class DetailedMemeController: UIViewController{
     override func viewDidLoad() {
         self.navigationController?.navigationBarHidden = true
         self.imageView.image = meme!.memedImage
-        self.imageView.contentMode = UIViewContentMode.ScaleAspectFill
+        self.imageView.contentMode = UIViewContentMode.ScaleAspectFit
     }
     
     
@@ -32,7 +32,10 @@ class DetailedMemeController: UIViewController{
     }
     
     @IBAction func BackButton(sender: AnyObject) {
-        self.dismissViewControllerAnimated(true, completion: nil)
+        
+        let navigationViewController = self.navigationController?.viewControllers[0]
+        
+        self.navigationController?.popToViewController(navigationViewController!, animated: true)
     }
     
     

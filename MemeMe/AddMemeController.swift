@@ -85,9 +85,10 @@ class AddMemeController: UIViewController, UIImagePickerControllerDelegate, UINa
     }
     
     func keyboardWillShow(notification: NSNotification) {
-        view.frame.origin.y -= getKeyboardHeight(notification)
         
-        
+        if bottomTextField.editing {
+            view.frame.origin.y -= getKeyboardHeight(notification)
+        }
     }
     
     func keyboardWillHide(notification: NSNotification) {
@@ -98,19 +99,14 @@ class AddMemeController: UIViewController, UIImagePickerControllerDelegate, UINa
     func getKeyboardHeight(notification: NSNotification) -> CGFloat {
         let userInfo = notification.userInfo
         let keyboardSize = userInfo![UIKeyboardFrameEndUserInfoKey] as! NSValue // of CGRect
-        
-        //        if UIDevice.currentDevice().orientation.isPortrait && topTextField.editing {
-        //            return keyboardSize.CGRectValue().height
-        //        } else {
-        //            return 0
-        //        }
-        
-        
+
         if bottomTextField.editing {
             return keyboardSize.CGRectValue().height
-        } else if topTextField.editing && UIDevice.currentDevice().orientation.isLandscape {
-            return keyboardSize.CGRectValue().height/2
-        }              else {
+        }
+//        else if topTextField.editing && UIDevice.currentDevice().orientation.isLandscape {
+//            return keyboardSize.CGRectValue().height/2
+//        }
+        else {
             return 0
         }
         
